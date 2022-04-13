@@ -1,0 +1,29 @@
+.nav {
+    background-color:lightblue;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px;
+}
+.logoWrap {
+    display: flex;
+}
+.title {
+    color:#feb826;
+    font-size: 24px;
+    margin: 0;
+    margin-top: 12px;
+}
+.mainLogo {
+    width: 43px;
+    height: 57px;
+}
+.list {
+    padding-top: 12px;
+}
+.list a {
+    text-decoration: none;
+    padding: 10px;
+    color: #0091b2;
+    font-size: 18px; 
+}
