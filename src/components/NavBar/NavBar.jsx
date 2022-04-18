@@ -11,11 +11,11 @@ function NavBar(props) {
                 </h1>
                 <img src={mainLogo} className="mainLogo" alt="logo" />
             </div>
-            <div className='list'>
-                <a href='#'>Funko large</a>
-                <a href='#'>Funko medium</a>
-                <a href='#'>Funko key chain</a>  
-            </div>  
+            <ul className='list'>
+                <li><a href='#'>Funko large</a></li>
+                <li><a href='#'>Funko medium</a></li>
+                <li><a href='#'>Funko key chain</a></li>  
+            </ul>  
         </div>
     );
 }
