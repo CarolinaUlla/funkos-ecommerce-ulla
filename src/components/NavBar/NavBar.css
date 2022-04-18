@@ -12,16 +12,17 @@
     color:#feb826;
     font-size: 24px;
     margin: 0;
-    margin-top: 12px;
+    margin-top: 20px;
 }
 .mainLogo {
     width: 43px;
     height: 57px;
+    margin-top: 12px;
 }
 .list {
-    padding-top: 12px;
     display: flex;
     list-style-type: none;
+    margin-top: 20px;
 }
 .list a {
     text-decoration: none;

@@ -1,6 +1,7 @@
 import React from 'react';
 import './NavBar.css'
 import mainLogo from './images/funko.png'
+import CartWidget from '../CartWidget/CartWidget';
 
 function NavBar(props) {
     return (
@@ -15,7 +16,9 @@ function NavBar(props) {
                 <li><a href='#'>Funko large</a></li>
                 <li><a href='#'>Funko medium</a></li>
                 <li><a href='#'>Funko key chain</a></li>  
-            </ul>  
+                <li><CartWidget/></li>
+            </ul>
+            
         </div>
     );
 }
