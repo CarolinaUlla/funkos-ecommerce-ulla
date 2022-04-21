@@ -1,0 +1,26 @@
+.icons {
+    display: flex;
+    justify-content: center;
+}
+.minus {
+    margin-top: 25px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+}
+.number {
+    font-size: 20px;
+    padding-bottom: 0px;
+}
+.plus {
+    margin-top: 25px;
+    padding-left: 80px;
+    padding-bottom: 20px;
+}
+.addItem {
+    background-color: lightblue;
+    border-color: lightblue;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
