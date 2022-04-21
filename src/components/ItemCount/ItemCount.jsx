@@ -5,9 +5,9 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faMinus } from '@fortawesome/free-solid-svg-icons'
 
 
-function ItemCount ({stock}) {
+function ItemCount () {
     const [count, setCount] = useState(0);
-    stock = 5;
+    const stock = 5;
     const handleClick1 = () => {
         if (count >= stock) {
             console.log('no hay mas stock disponible')
