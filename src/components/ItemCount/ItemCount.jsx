@@ -1,47 +1,34 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './ItemCount.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import { faMinus } from '@fortawesome/free-solid-svg-icons'
 
+function ItemCount({stock, initial, onAdd}) {
 
-function ItemCount () {
-    const [count, setCount] = useState(0);
-    const stock = 5;
-    const handleClick1 = () => {
-        if (count >= stock) {
-            console.log('no hay mas stock disponible')
-            return;
-          }
-        setCount(count + 1)
-    }
-    const handleClick2 = () => {
-        if (count === 0) {
-            return;
-          }
-        setCount(count - 1)
-      }
-      function onAdd (count){
-          if (count > stock) {
-            return;
+    const [count, setCount] = useState (initial);
+
+    const handlePlusButton = () => {
+            if (count >= stock) {
+                console.log('no hay mas stock disponible')
+                return;
+              }
+            setCount(count + 1)
         }
-          console.log(`${count} item/s agregado/s`)
-
-      }
-
+        const handleMinusButton = () => {
+            if (count === 0) {
+                return;
+              }
+            setCount(count - 1)
+          }
     return (
         <>
         <div className='icons'>
-            <FontAwesomeIcon icon={faMinus} className='minus'  onClick={(handleClick2)}/>
-            <p className='number'>{count}</p>
-            <FontAwesomeIcon icon={faPlus} className='plus' onClick={(handleClick1)}/>
-        </div>
-        <div>
-            <button className='addItem'onClick={()=> onAdd(count)}>
-                Agregar al carrito
-            </button>
-        </div>
-        </>
+        <p className='minus' onClick={(handleMinusButton)}> - </p>
+        <p className='number'>{count}</p>
+        <p className='plus' onClick={(handlePlusButton)} > + </p>
+    </div>
+    <div>
+    <button className='addItem' onClick={() => onAdd()}>Agregar al carrito</button>
+    </div>
+    </>
     );
 }
 
