@@ -1,0 +1,29 @@
+.product {
+    height: 350px;
+    width: 300px;
+    text-align: center;
+    margin: 20px;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+}
+
+.product-name {
+    color:#feb826;
+    font-size: 20px;
+}
+
+.product-image {
+    height: 200px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-price {
+    font-size: 18px;
+}
+.product-detail {
+    font-size: 14px;
+}
