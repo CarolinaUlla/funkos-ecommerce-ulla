@@ -22,10 +22,12 @@ function ItemListContainer({greeting}) {
   <div className='greeting'>
     <p>{greeting}</p>
     </div>
-    <div className='full-product'>
+    <section class="section">
+    <div class="columns">
     <ItemList products ={products}></ItemList>
     </div>
     {/* <ItemCount stock={5} initial={0} onAdd={cart}></ItemCount> */}
+    </section>
   </>
   )
 }
