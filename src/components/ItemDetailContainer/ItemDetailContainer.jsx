@@ -1,14 +1,19 @@
 import React, { useEffect , useState } from "react"
 import ItemDetail from '../ItemDetail/ItemDetail'
+import ItemCount from '../ItemCount/ItemCount'
 
-const calledItem = [{
+
+function ItemDetailContainer() {
+     function cart (){
+    console.log('item agregado');
+  };
+    const calledItem = [{
+    
         name: "The mandalorian",
         description: "Fuko large",
         price: '$5600',
         PictureUrl: "https://m.media-amazon.com/images/I/51+oXX7b0xL._AC_SX569_.jpg",
-    }]
-    const ItemDetailContainer = () => {
-        
+    }]      
         const [items, setItems] = useState([])
         
         useEffect( () => {
@@ -31,6 +36,7 @@ const calledItem = [{
                 {items.map((item, i)=>{
                     return <ItemDetail item={item}/>
                 })}
+                { <ItemCount stock={5} initial={0} onAdd={cart}></ItemCount> }
             </div>
             </>
         );
@@ -42,4 +48,5 @@ const calledItem = [{
         )
     }
     }
-export default  ItemDetailContainer 
+
+export default ItemDetailContainer;

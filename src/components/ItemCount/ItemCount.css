@@ -1,29 +1,16 @@
 .count-table {
-    margin-left: 38px;
+    padding: 20px;
 }
 .icons {
-    display: flex;
-    justify-content: center;
-}
-.minus {
-    margin-top: 15px;
-    font-size: 30px;
-    padding-right: 80px;
+    padding: 10px;
 }
 .number {
-    font-size: 20px;
-    padding-bottom: 0px;
-}
-.plus {
-    margin-top: 15px;
-    font-size: 30px;
-    padding-left: 80px;
-}
-.addItem {
-    background-color: lightblue;
-    border-color: lightblue;
-    border-radius: 50px;
-    font-size: 20px;
-    padding: 20px;
-    margin-bottom: 50px;
+    align-items: center;
+    display: inline-flex;
+    font-size: 1.25rem;
+    height: 2em;
+    justify-content: center;
+    min-width: 3.5em;
+    padding: 0.25rem 0.5rem;
+    margin-left: 20px;
 }
