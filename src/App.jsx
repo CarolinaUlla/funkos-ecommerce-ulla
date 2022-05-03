@@ -1,15 +1,19 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-//import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemListContainer from './pages/ItemListContainer/ItemListContainer';
 import 'bulma/css/bulma.min.css';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import ItemDetailContainer from './pages/ItemDetailContainer/ItemDetailContainer'
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <NavBar></NavBar>
-      {/* { <ItemListContainer greeting='Funkos available:'/> } */}
-       <ItemDetailContainer></ItemDetailContainer> 
+      <NavBar/>
+      <Routes>
+        <Route path='/' element={<ItemListContainer greeting='Funkos available:' />}/>
+        <Route path='/category/:id' element={<ItemListContainer />}/>
+        <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+      </Routes>
     </div>
   );
 }

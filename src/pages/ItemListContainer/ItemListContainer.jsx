@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import './ItemListContainer.css'
 //import ItemCount from '../ItemCount/ItemCount'
-import ItemList from '../ItemList/ItemList'
+import ItemList from '../../components/ItemList/ItemList'
 import getData from '../../services/getData'
 
 
@@ -19,11 +19,11 @@ function ItemListContainer({greeting}) {
  
   return (
   <>
-  <div className='greeting'>
+  <div className='box cta' >
     <p>{greeting}</p>
     </div>
-    <section class="section">
-    <div class="columns">
+    <section class="section container">
+    <div class="columns features">
     <ItemList products ={products}></ItemList>
     </div>
     {/* <ItemCount stock={5} initial={0} onAdd={cart}></ItemCount> */}

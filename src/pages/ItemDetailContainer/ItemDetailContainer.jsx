@@ -1,6 +1,6 @@
 import React, { useEffect , useState } from "react"
-import ItemDetail from '../ItemDetail/ItemDetail'
-import ItemCount from '../ItemCount/ItemCount'
+import ItemDetail from '../../components/ItemDetail/ItemDetail'
+import ItemCount from '../../components/ItemCount/ItemCount'
 
 
 function ItemDetailContainer() {
@@ -8,11 +8,12 @@ function ItemDetailContainer() {
     console.log('item agregado');
   };
     const calledItem = [{
-    
-        name: "The mandalorian",
-        description: "Fuko large",
+
+        id: 1,
+        title: "The mandalorian",
+        detail: "Fuko large",
         price: '$5600',
-        PictureUrl: "https://m.media-amazon.com/images/I/51+oXX7b0xL._AC_SX569_.jpg",
+        image: "https://m.media-amazon.com/images/I/51+oXX7b0xL._AC_SX569_.jpg",
     }]      
         const [items, setItems] = useState([])
         

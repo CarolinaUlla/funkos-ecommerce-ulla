@@ -2,13 +2,14 @@ import React from 'react';
 import './NavBar.css'
 import mainLogo from './images/funko.png'
 import CartWidget from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 
 function NavBar(props) {
   const [isActive, setisActive] = React.useState(false)
 
   return (
     <nav className='navbar is-primary' role='navigation' aria-label='main navigation'>
-      <div className='navbar-brand'>
+      <div className='navbar-brand'><Link to= {'/'}></Link> 
         <h1 className='name'> FunkoPop!</h1>
         <img src={mainLogo} className="mainLogo" alt="logo" />
         <a onClick={() => { setisActive(!isActive)

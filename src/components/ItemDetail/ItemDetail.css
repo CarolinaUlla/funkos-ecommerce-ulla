@@ -3,3 +3,9 @@
     height: 201px;
     margin-top: 20px;
 }
+.detail-product {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
