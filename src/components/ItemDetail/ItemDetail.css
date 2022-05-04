@@ -9,3 +9,8 @@
     align-items: center;
     justify-content: center;
 }
+
+#more-info {
+    display: flex;
+    margin-top: 15px;
+}

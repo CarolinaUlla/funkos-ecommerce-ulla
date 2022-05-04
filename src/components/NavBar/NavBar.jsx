@@ -1,17 +1,19 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import './NavBar.css'
 import mainLogo from './images/funko.png'
 import CartWidget from '../CartWidget/CartWidget';
-import { Link } from 'react-router-dom';
 
 function NavBar(props) {
   const [isActive, setisActive] = React.useState(false)
 
   return (
     <nav className='navbar is-primary' role='navigation' aria-label='main navigation'>
-      <div className='navbar-brand'><Link to= {'/'}></Link> 
+      <div className='navbar-brand'>
         <h1 className='name'> FunkoPop!</h1>
+        <Link to= {'/'}> 
         <img src={mainLogo} className="mainLogo" alt="logo" />
+        </Link>
         <a onClick={() => { setisActive(!isActive)
           }}
           role='button'
@@ -28,15 +30,9 @@ function NavBar(props) {
       <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
         <div className='navbar-end'>
           <div className='navbar-item'>
-            <a href='/' className='navbar-item'>
-              Funko Large
-            </a>
-            <a href='/' className='navbar-item'>
-              Funko Medium
-            </a>
-            <a href='/' className='navbar-item'>
-              Funko Key Chain
-            </a>
+          <li className='navbar-item'><NavLink to='/category/funkoLarge' className={nav => nav.isActive ? 'nav-active' : ''}>Funko Large</NavLink></li>
+          <li className='navbar-item'><NavLink to='/category/funkoMedium' className={nav => nav.isActive ? 'nav-active' : ''}>Funko Medium</NavLink></li>
+          <li className='navbar-item'><NavLink to='/category/funkoKeyChain' className={nav => nav.isActive ? 'nav-active' : ''}>Funko Key chain</NavLink></li>
             <CartWidget className='navbar-item cartWidget'></CartWidget>
           </div>
         </div>

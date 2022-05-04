@@ -19,3 +19,9 @@ div .navbar-menu .navbar-item :hover{
     background-color:#feb826;
     color: white;
 }
+.navbar-item a {
+    color: white;
+}
+.nav-active {
+    font-weight: bold;
+}

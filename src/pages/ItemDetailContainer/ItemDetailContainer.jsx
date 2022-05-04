@@ -1,53 +1,79 @@
 import React, { useEffect , useState } from "react"
 import ItemDetail from '../../components/ItemDetail/ItemDetail'
 import ItemCount from '../../components/ItemCount/ItemCount'
+import { useParams } from 'react-router-dom'
 
-
-function ItemDetailContainer() {
-     function cart (){
+function cart (){
     console.log('item agregado');
   };
-    const calledItem = [{
 
-        id: 1,
-        title: "The mandalorian",
-        detail: "Fuko large",
-        price: '$5600',
-        image: "https://m.media-amazon.com/images/I/51+oXX7b0xL._AC_SX569_.jpg",
-    }]      
-        const [items, setItems] = useState([])
+  function getItem(id) {
+    const myPromise = new Promise((resolve, reject) => {
+        const productsList = [
+            {
+                id: 1,
+                title: 'Harry potter',
+                image: 'https://m.media-amazon.com/images/I/71n40hBlR4L._AC_SL1500_.jpg',
+                detail:'Funko medium',
+                price: '$2700',
+                moreInfo: '9 x 10 cm'
+              },
+          
+              {
+                id: 2,
+                title: 'Breaking bad- Walter White',
+                image: 'https://m.media-amazon.com/images/I/41S1lN96GHL._AC_.jpg',
+                detail:'Funko medium',
+                price: '$2900',
+                moreInfo: '9 x 10 cm'
+              },
+          
+              {
+                id: 3,
+                title: 'The Walking dead- Daryl',
+                image: 'https://m.media-amazon.com/images/I/61IjS-2zasL._AC_SY606_.jpg',
+                detail:'Funko key chain',
+                price: '$1500',
+                moreInfo: '5 x 5 cm'
+              },
+          
+              {
+                id: 4,
+                title: 'Stranger things- Eleven',
+                image: 'https://m.media-amazon.com/images/I/61nEyJzOMDL._AC_SY606_.jpg',
+                detail:'Funko medium',
+                price: '$3100',
+                moreInfo: '15 x 15 cm'
+              }
+        ];
+        const item = productsList.filter(item => item.id === parseInt(id));
+        setTimeout(() => {
+            resolve(item[0]);
+        }, 1000);
+    });
+    return myPromise;
+}
+
+function ItemDetailContainer() {
+    const [item, setItems] = useState([])  
+    const { id } = useParams();
         
         useEffect( () => {
-            
-            const getItem = new Promise((resolve) => {
-                setTimeout (()=>{
-                    resolve(calledItem)
-            },2000)
-            
-        })
-        getItem
-        .then((res)=>{
-            setItems(res)
-        })
-    })
-    if(items.length > 0){
+            getItem(id)
+            .then((res)=>{
+                setItems(res);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }, [id]);
+
         return (
-            <>
             <div>
-                {items.map((item, i)=>{
-                    return <ItemDetail item={item}/>
-                })}
-                { <ItemCount stock={5} initial={0} onAdd={cart}></ItemCount> }
+                <ItemDetail item={item}/>
+                <ItemCount stock={5} initial={0} onAdd={cart}></ItemCount>
             </div>
-            </>
-        );
-            }else {
-        return (
-            <>
-            <p>Cargando...</p>
-            </>
         )
-    }
     }
 
 export default ItemDetailContainer;

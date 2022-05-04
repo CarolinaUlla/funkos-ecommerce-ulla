@@ -1,6 +1,7 @@
-.full-product {
-    display: flex;
-}
+
 body {
     background-color: #EFF3F4;
+}
+.productGrid {
+    display: flex;
 }

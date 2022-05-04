@@ -2,16 +2,16 @@ import React from 'react';
 import './Item.css'
 import { Link } from 'react-router-dom';
 
-const Item = ({ id, title, image, detail, price }) => {
+const Item = ({ item }) => {
     return (
-        <div className="column is-3">
+        <div className='column'>
             <div className='card is-shady'>
                 <div className='funko-card'>
-                    <img src= {image} className="product-image" alt="product Logo" />
-                  <p className='subtitle'>{title}</p>
-                  <p>{detail}</p>
-                  <p className='product-price tag is-info is-light is-large'>{price}</p>
-                  <Link to= {'/item/' + id}>Ver detalle</Link>
+                    <img src= {item.image} className="product-image" alt="product Logo" />
+                  <p className='subtitle'>{item.title}</p>
+                  <p>{item.detail}</p>
+                  <p className='product-price tag is-info is-light is-large'>{item.price}</p>
+                  <p><Link to= {'/item/' + item.id}>More details</Link></p>
                 </div>
             </div>
         </div>
