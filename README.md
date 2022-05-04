@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Funko Ecommerce
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -14,7 +16,7 @@ You may also see any lint errors in the console.
 
 ## Description
 
-React ecommerce app for funkos sale developed for a coderhouse proyect
+React ecommerce app for funkos sale developed for a CoderHouse proyect.
 
 ## Navigate
 
