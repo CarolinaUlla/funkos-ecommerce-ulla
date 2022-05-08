@@ -14,3 +14,11 @@
     display: flex;
     margin-top: 15px;
 }
+
+.buy {
+    margin-top: 20px;
+}
+
+.buy a {
+    color: white;
+}

@@ -1,11 +1,6 @@
 import React, { useEffect , useState } from "react"
 import ItemDetail from '../../components/ItemDetail/ItemDetail'
-import ItemCount from '../../components/ItemCount/ItemCount'
 import { useParams } from 'react-router-dom'
-
-function cart (){
-    console.log('item agregado');
-  };
 
   function getItem(id) {
     const myPromise = new Promise((resolve, reject) => {
@@ -16,7 +11,8 @@ function cart (){
                 image: 'https://m.media-amazon.com/images/I/71n40hBlR4L._AC_SL1500_.jpg',
                 detail:'Funko medium',
                 price: '$2700',
-                moreInfo: '9 x 10 cm'
+                moreInfo: '9 x 10 cm',
+                stock: 5
               },
           
               {
@@ -25,7 +21,8 @@ function cart (){
                 image: 'https://m.media-amazon.com/images/I/41S1lN96GHL._AC_.jpg',
                 detail:'Funko medium',
                 price: '$2900',
-                moreInfo: '9 x 10 cm'
+                moreInfo: '9 x 10 cm',
+                stock: 3
               },
           
               {
@@ -34,7 +31,8 @@ function cart (){
                 image: 'https://m.media-amazon.com/images/I/61IjS-2zasL._AC_SY606_.jpg',
                 detail:'Funko key chain',
                 price: '$1500',
-                moreInfo: '5 x 5 cm'
+                moreInfo: '5 x 5 cm',
+                stock: 12
               },
           
               {
@@ -43,7 +41,8 @@ function cart (){
                 image: 'https://m.media-amazon.com/images/I/61nEyJzOMDL._AC_SY606_.jpg',
                 detail:'Funko medium',
                 price: '$3100',
-                moreInfo: '15 x 15 cm'
+                moreInfo: '15 x 15 cm',
+                stock: 8
               }
         ];
         const item = productsList.filter(item => item.id === parseInt(id));
@@ -71,7 +70,6 @@ function ItemDetailContainer() {
         return (
             <div>
                 <ItemDetail item={item}/>
-                <ItemCount stock={5} initial={0} onAdd={cart}></ItemCount>
             </div>
         )
     }

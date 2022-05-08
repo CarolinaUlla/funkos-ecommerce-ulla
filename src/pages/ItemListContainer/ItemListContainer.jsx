@@ -17,7 +17,8 @@ import { useParams } from 'react-router-dom';
       image: 'https://m.media-amazon.com/images/I/71n40hBlR4L._AC_SL1500_.jpg',
       detail:'Funko medium',
       price: '$2700',
-      category: 'funkoMedium'
+      category: 'funkoMedium',
+      stock: 5
     },
 
     {
@@ -26,7 +27,8 @@ import { useParams } from 'react-router-dom';
       image: 'https://m.media-amazon.com/images/I/41S1lN96GHL._AC_.jpg',
       detail:'Funko medium',
       price: '$2900',
-      category: 'funkoMedium'
+      category: 'funkoMedium',
+      stock: 3
     },
 
     {
@@ -35,7 +37,8 @@ import { useParams } from 'react-router-dom';
       image: 'https://m.media-amazon.com/images/I/61IjS-2zasL._AC_SY606_.jpg',
       detail:'Funko key chain',
       price: '$1500',
-      category: 'funkoKeyChain'
+      category: 'funkoKeyChain',
+      stock: 8
     },
 
     {
@@ -44,7 +47,8 @@ import { useParams } from 'react-router-dom';
       image: 'https://m.media-amazon.com/images/I/61nEyJzOMDL._AC_SY606_.jpg',
       detail:'Funko large',
       price: '$5100',
-      category: 'funkoLarge'
+      category: 'funkoLarge',
+      stock: 12
     }
   ];
   const productsFiltered = category ? productsList.filter(p => p.category === category) : productsList;
