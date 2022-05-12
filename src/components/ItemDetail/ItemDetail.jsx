@@ -1,17 +1,16 @@
-import React from "react"
+import React, { useContext } from 'react';
 import './ItemDetail.css'
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import CartContext from '../../context/cartContext';
 import ItemCount from '../ItemCount/ItemCount'
  
 function ItemDetail ({item}) {
+    const cartCtx = useContext(CartContext);
 
-    const [totalProducts, setTotalProducts] = useState (null);
-    
-    function addHandler (quantityToAdd){
-        setTotalProducts (quantityToAdd);
-        console.log('item agregado');
+    function addHandler(quantityToAdd) {
+        cartCtx.addProduct({quantity: quantityToAdd, ...item});
     }
+
     return (
      <div className="detail-product">
             <div className='card is-shady'>
@@ -22,14 +21,25 @@ function ItemDetail ({item}) {
                     <p className="tag is-info">{item?.price}</p>
                     <p className="tag is-info is-light is-large" id="more-info">{item?.moreInfo}</p>
                     <div className="count-container">
-                        {totalProducts ?
-                        <button className= "buy button is-primary is-medium"><Link to='/cart'>Review and Payment ({totalProducts} Funkos)</Link></button> :
                         <ItemCount stock={item.stock} initial={0} onAdd={addHandler}></ItemCount>
-                        }
+                        {cartCtx.products.length &&
+                        <button className='buy button is-primary is-medium' onClick={() => console.log(cartCtx)}>
+                            <Link to='/cart'>
+                                Review and Payment ({ cartCtx.getCartQuantity() } Funkos)
+                            </Link>
+                        </button>
+                    }
+                    <div>
+                        <button className='button is-info is-light' onClick={() => console.log(cartCtx.products)} >Imprimir carrito</button>
+                        <button className='button is-info is-light' onClick={() => cartCtx.removeProduct(item.id)} >Remove product</button>
+                        <button className='button is-info is-light' onClick={() => cartCtx.clear()} >Clear</button>
+                        <button className='button is-info is-light' onClick={() => console.log(cartCtx.isInCart(item.id))} >Is in cart</button>
+                        <button className='button is-info is-light' onClick={() => console.log(cartCtx.getCartQuantity())} >Quantity</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     )
 }
 
