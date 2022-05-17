@@ -1,12 +1,7 @@
-import React, {useEffect, useState} from 'react'
-import './ItemListContainer.css'
-//import ItemCount from '../ItemCount/ItemCount'
-import ItemList from '../../components/ItemList/ItemList'
+import React, {useEffect, useState} from 'react';
+import './ItemListContainer.css';
+import ItemList from '../../components/ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-
-  // function cart (){
-  //   console.log('item agregado');
-  // };
 
   function getProducts(category) {
     const myPromise = new Promise((resolve, reject) => {
@@ -16,7 +11,7 @@ import { useParams } from 'react-router-dom';
       title: 'Harry potter',
       image: 'https://m.media-amazon.com/images/I/71n40hBlR4L._AC_SL1500_.jpg',
       detail:'Funko medium',
-      price: '$2700',
+      price: '2700',
       category: 'funkoMedium',
       stock: 5
     },
@@ -26,7 +21,7 @@ import { useParams } from 'react-router-dom';
       title: 'Breaking bad- Walter White',
       image: 'https://m.media-amazon.com/images/I/41S1lN96GHL._AC_.jpg',
       detail:'Funko medium',
-      price: '$2900',
+      price: '2900',
       category: 'funkoMedium',
       stock: 3
     },
@@ -36,7 +31,7 @@ import { useParams } from 'react-router-dom';
       title: 'The Walking dead- Daryl',
       image: 'https://m.media-amazon.com/images/I/61IjS-2zasL._AC_SY606_.jpg',
       detail:'Funko key chain',
-      price: '$1500',
+      price: '1500',
       category: 'funkoKeyChain',
       stock: 8
     },
@@ -46,7 +41,7 @@ import { useParams } from 'react-router-dom';
       title: 'Stranger things- Eleven',
       image: 'https://m.media-amazon.com/images/I/61nEyJzOMDL._AC_SY606_.jpg',
       detail:'Funko large',
-      price: '$5100',
+      price: '5100',
       category: 'funkoLarge',
       stock: 12
     }
@@ -76,7 +71,6 @@ function ItemListContainer({greeting}) {
         <p>{greeting}</p>
       </div>
         <ItemList items ={products}></ItemList>
-      {/* <ItemCount stock={5} initial={0} onAdd={cart}></ItemCount> */}
     </div>
   )
 }

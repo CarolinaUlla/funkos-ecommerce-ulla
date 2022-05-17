@@ -1,0 +1,24 @@
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.cart-item p {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.cart-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cart-img-container {
+    height: 100px;
+}
