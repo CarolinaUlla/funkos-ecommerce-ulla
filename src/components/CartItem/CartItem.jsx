@@ -11,7 +11,7 @@ function CartItem({ item }) {
     <>
         <div className='cart-item is-shady'>
           <div className='bubble-quantity'>
-            <Bubble>{ item?.quantity }</Bubble>
+            <Bubble stock={item.stock}>{ item?.quantity }</Bubble>
           </div>
           <div className='cart-img-container'>
             <img src={ item?.image } alt="Imagen del producto" />

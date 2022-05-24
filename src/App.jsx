@@ -4,6 +4,7 @@ import ItemListContainer from './pages/ItemListContainer/ItemListContainer';
 import 'bulma/css/bulma.min.css';
 import ItemDetailContainer from './pages/ItemDetailContainer/ItemDetailContainer'
 import Cart from './pages/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
 import { Routes, Route } from 'react-router-dom';
 import { CartContextProvider } from './context/cartContext';
 
@@ -17,6 +18,7 @@ function App() {
           <Route path='/category/:categoryId' element={<ItemListContainer />}/>
           <Route path='/item/:id' element={<ItemDetailContainer/>}/>
           <Route path='/cart' element={<Cart/>} />
+          <Route path='/checkout' element={<Checkout/>} />
           </Routes>
       </CartContextProvider>
     </div>

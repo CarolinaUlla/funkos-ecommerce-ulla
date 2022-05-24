@@ -24,8 +24,7 @@ function ItemListContainer({greeting}) {
 
 
   useEffect(() => {
-
-
+    
     getProducts (categoryId)
     .then((snapshot) => setProducts(snapshot.docs.map(doc => { return { ...doc.data(), id: doc.id}})))
     .catch((err) => console.log('error', err))

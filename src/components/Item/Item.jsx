@@ -10,7 +10,7 @@ const Item = ({ item }) => {
         <div className='column'>
             <div className='card is-shady'>
                 <div className='funko-card'>
-                    <Bubble isButton onBubbleClick={() => cartCtx.addProduct({quantity: 1, ...item})}>+</Bubble>
+                    <Bubble isButton onBubbleClick={() => cartCtx.addProduct({quantity: 1, ...item}, item.stock)}>+</Bubble>
                     <img src= {item.image} className="product-image" alt="product Logo" />
                     <p className='subtitle'>{item.title}</p>
                     <p>{item.detail}</p>
