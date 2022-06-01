@@ -33,7 +33,7 @@ function NavBar(props) {
           <li className='navbar-item'><NavLink to='/category/funkoLarge' className={nav => nav.isActive ? 'nav-active' : ''}>Funko Large</NavLink></li>
           <li className='navbar-item'><NavLink to='/category/funkoMedium' className={nav => nav.isActive ? 'nav-active' : ''}>Funko Medium</NavLink></li>
           <li className='navbar-item'><NavLink to='/category/funkoKeyChain' className={nav => nav.isActive ? 'nav-active' : ''}>Funko Key chain</NavLink></li>
-            <CartWidget className='navbar-item cartWidget'></CartWidget>
+          <CartWidget className='navbar-item cartWidget'></CartWidget>
           </div>
         </div>
       </div>

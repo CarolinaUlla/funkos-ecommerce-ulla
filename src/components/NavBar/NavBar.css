@@ -25,3 +25,11 @@ div .navbar-menu .navbar-item :hover{
 .nav-active {
     font-weight: bold;
 }
+
+.navbar-item {
+    background-color: #00D1B2;
+}
+
+.navbar-item #cartWidget {
+    width: 30px;
+}

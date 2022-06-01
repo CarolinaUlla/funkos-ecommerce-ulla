@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 
 const Checkout = () => {
 
-    const {products, getTotalPrice} =useContext(CartContext)
+    const {products, clear, getTotalPrice} =useContext(CartContext)
     const [orderId, setOrderId] = useState();
 
     const [buyer, setBuyer] = useState ({
@@ -54,8 +54,9 @@ const Checkout = () => {
         console.log(data)
         await generateOrder(data)
     }
-
-
+    const handleContinue = () => {
+        clear()
+    }
     return (
     <div>
         <section className="hero is-info">
@@ -106,7 +107,8 @@ const Checkout = () => {
                     <div className='column is-half'>
                         <h4 className='title is-4'>Purchase Completed Successfully</h4>
                         <h4>{`Your purchase code is: ${orderId}`}</h4>
-                        <Link to="/"><span className='tag is-link is-light is-large'>Continue shopping</span></Link>
+                        <Link to="/"><span onClick={handleContinue} className='tag is-link is-light is-large'> 
+                            Continue shopping</span></Link>
                     </div>
                     )
             }

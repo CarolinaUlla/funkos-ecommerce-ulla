@@ -12,8 +12,8 @@ function ItemDetail ({item}) {
     }
 
     return (
-    <div className="detail-product columns">
-        <div className='card is-shady column is-two-fifhts'>
+    <div className="detail-product">
+        <div className='card is-shady column'>
             <img src={item?.image} className='funkoImage' alt='funko'></img>
             <div>
                 <p className="subtitle">{item?.title}</p>

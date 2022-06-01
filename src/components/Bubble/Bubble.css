@@ -10,6 +10,11 @@
     border-radius: 50%;
     cursor: pointer;
 }
+@media only screen and (max-width: 768px) {
+    .cart-bubble div .bubble {
+        display: inline;
+    }
+}
 
 .bubble-button:hover {
     -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);

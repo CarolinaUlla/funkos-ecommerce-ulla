@@ -14,7 +14,7 @@ const Item = ({ item }) => {
                     <img src= {item.image} className="product-image" alt="product Logo" />
                     <p className='subtitle'>{item.title}</p>
                     <p>{item.detail}</p>
-                    <p className='product-price tag is-info is-light is-large'>{item.price}</p>
+                    <p className='product-price tag is-info is-light is-large'>${item.price}</p>
                     <p><Link to= {'/item/' + item.id}>More details</Link></p>
                 </div>
             </div>
