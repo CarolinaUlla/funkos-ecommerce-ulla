@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
-import Bubble from '../Bubble/Bubble'
-import CartContext from '../../context/cartContext'
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import Bubble from '../Bubble/Bubble';
+import CartContext from '../../context/cartContext';
 import './CartWidget.css'
 
 
