@@ -1,4 +1,4 @@
-# Funko Ecommerce
+# Funko Ecommerce 🐱‍💻
 
 ## Getting Started with Create React App
 
